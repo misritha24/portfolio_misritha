@@ -1,0 +1,414 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.link-group {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.link:hover, .link.active {
+    background: rgb(241, 10, 222);
+    color: #fff;
+}
+
+/* Sections */
+section {
+    display: none;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+section.active {
+    display: block;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Home Section Styling */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #171616;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.home-content {
+    max-width: 500px;
+}
+
+.hero-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    background-color: #0056b3;
+}
+
+.home-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Project Section Full Width */
+.project-section {
+    width: 100%;
+    padding: 50px 0;
+    background-color: #4ddbeda1; /* Background color for the section */
+}
+
+/* Project Container */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: #e016b1c0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the content */
+}
+
+/* Project Image - Small Round Image */
+.project-img {
+    width: 100px; /* Set width of the image */
+    height: 100px; /* Set height of the image */
+    border-radius: 50%; /* Make the image round */
+    object-fit: cover; /* Ensure the image covers the circle without distortion */
+    margin-bottom: 20px; /* Space below the image */
+}
+
+/* Project Title */
+.project-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Project Table Styles */
+.project-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #fff;
+    text-align: left;
+}
+
+.project-table th, .project-table td {
+    padding: 12px;
+    border: 1px solid #ccc;
+}
+
+.project-table th {
+    background-color: #333;
+    font-size: 18px;
+}
+
+.project-table td {
+    background-color: #444;
+    font-size: 16px;
+}
+
+.project-table tr:hover {
+    background-color: #555;
+}
+
+/* GitHub Button Styling */
+.project-btn-grp {
+    margin-top: 30px; /* Add space above the button */
+    text-align: center;
+}
+
+.project-btn.github {
+    padding: 12px 25px;
+    background-color: hsla(140, 97%, 52%, 0.977);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.project-btn.github a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-btn.github:hover {
+    background-color: #00f2fe; /* Lighter blue on hover */
+}
+
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.about-img-container {
+    position: relative;
+    text-align: center;
+}
+
+.about-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.download-cv-btn {
+    padding: 15px 30px;
+    background-color: hsl(33, 99%, 65%); /* Button background color */
+    color: white;
+    font-size: 18px;
+    font-weight: bold; /* Make the text bold */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Space between image and button */
+}
+
+.download-cv-btn:hover {
+    background: #0056b3;
+}
+
+.about-info {
+    font-size: 1rem;
+    color: #0b0b0b;
+    text-align: center;
+}
+/* Education Table Styling */
+.education-table {
+    width: 100%;
+    border-collapse: collapse; /* Ensures borders collapse into a single border */
+    margin-top: 20px;
+    border: 2px solid #000; /* Adds border around the table */
+}
+
+.education-table th, .education-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd; /* Adds border around table cells */
+}
+
+.education-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.education-table td {
+    background-color: #fafafa;
+}
+
+.education-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.education-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Contact Section */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 0.75rem;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0056b3;
+}
+
+.map iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+    border: 0;
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #4facfe, #00f2fe); /* Blue gradient */
+    color: #fff; /* White text */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Add additional padding and margins to sections if necessary */
+section {
+    padding: 50px;
+    margin: 20px;
+}
+
+
+
+
+
+
+/* Body Styling with Gradient and Image Background */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img/background.jpg') no-repeat center center fixed, linear-gradient(to right, #4facfe, #00f2fe); /* Replace with your image path */
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    position: relative;
+}
+
+/* Overlay Styling for Enhanced Contrast */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for contrast */
+    z-index: -1;
+}
+
+/* Add additional padding and margins to sections if necessary */
+section {
+    padding: 50px;
+    margin: 20px;
+}
